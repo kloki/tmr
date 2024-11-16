@@ -1,3 +1,5 @@
+![Example](./example.png)
+
 # tmr
 
 simple timer for you cli.

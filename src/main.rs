@@ -10,6 +10,9 @@ async fn main() {
         viewport: Viewport::Inline(10),
     })
     .unwrap();
-    App::new().run(terminal).await.unwrap();
+    let result = App::new().run(terminal).await;
     ratatui::restore();
+    if result.is_err() {
+        println!("\nSomething went wrong!")
+    }
 }

@@ -96,7 +96,7 @@ impl App {
     }
 
     fn build_layout(&self, body: Rect) -> (Rect, Rect) {
-        let body_layout = Layout::horizontal([Constraint::Min(8), Constraint::Fill(1)]);
+        let body_layout = Layout::horizontal([Constraint::Length(50), Constraint::Fill(1)]);
         let [timer_area, _] = body_layout.areas(body);
         let timer_layout = Layout::horizontal([Constraint::Fill(1), Constraint::Fill(1)]);
         let [area_seconds, area_millis] = timer_layout.areas(timer_area);
